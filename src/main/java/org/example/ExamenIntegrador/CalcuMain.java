@@ -24,30 +24,57 @@ public class CalcuMain {
         switch (operación) {
             case '+':
                 resultado = calculadora.sumar(valor1, valor2);
+                System.out.println("Resultado: " + resultado);
+                if (resultado < 0) {
+                    System.out.println("El resultado es negativo, ten Cuidado!");
+                }
+                if (resultado > 1000) {
+            System.out.println("El resultado es un número grande");
+                }
                 break;
             case '-':
                 resultado = calculadora.restar(valor1, valor2);
-                break;
-            case '*':
-                resultado = calculadora.multiplicar(valor1, valor2);
-            case '/':
-                try {
-                    resultado = calculadora.dividir(valor1, valor2);
-                } catch (IllegalArgumentException e) {
-                    System.out.println(e.getMessage());
-                    return;
-                }
-                if (resultado > 0) {
-                    System.out.println("Resultado: " + resultado);
-                }
-
+                System.out.println("Resultado: " + resultado);
                 if (resultado < 0) {
                     System.out.println("El resultado es negativo, ten Cuidado!");
                 }
                 if (resultado > 1000) {
                     System.out.println("El resultado es un número grande");
                 }
+                break;
+            case '*':
+                resultado = calculadora.multiplicar(valor1, valor2);
+                System.out.println("Resultado: " + resultado);
+                if (resultado < 0) {
+                    System.out.println("El resultado es negativo, ten Cuidado!");
+                }
+                if (resultado > 1000) {
+                    System.out.println("El resultado es un número grande");
+                }
+            case '/':
+                try {
+                    resultado = calculadora.dividir(valor1, valor2);
+                    System.out.println("Resultado: " + resultado);
+                    if (resultado < 0) {
+                        System.out.println("El resultado es negativo, ten Cuidado!");
+                    }
+                    if (resultado > 1000) {
+                        System.out.println("El resultado es un número grande");
+                    }
+                } catch (IllegalArgumentException e) {
+                    System.out.println(e.getMessage());
+                    return;
+
+                }
+//                System.out.println("Resultado: " + resultado);
+//
+//                if (resultado < 0) {
+//                    System.out.println("El resultado es negativo, ten Cuidado!");
+//                }
+//                if (resultado > 1000) {
+//                    System.out.println("El resultado es un número grande");
+                }
             }
         }
     }
-}
+

@@ -1,31 +1,21 @@
 package org.example.ExamenIntegrador;
 
-import java.util.Scanner;
-
 public class Calculadora {
 
-    public int sumar() {
-        return 0;
+    public int sumar(int valor1, int valor2) {
+        return valor1 + valor2;
     }
-
-    public int sumar(int operando1) {
-        return operando1 + 10;
+    public int restar(int valor1, int valor2) {
+        return valor1 - valor2;
     }
-
-    public int sumar(int operando1, int operando2) {
-        return operando1 + operando2;
+    public int multiplicar(int valor1, int valor2) {
+        return valor1 * valor2;
     }
-
-    Scanner scanner = new Scanner(System.in);
-
-       // System.out.println("Ingresar Primer Valor");
-        int valor1 = scanner.nextInt();
-
-      //  System.out.println("Ingresar Segundo Valor");
-        int valor2 = scanner.nextInt();
-
-       // System.out.println("Ingresar Operación");
-        String operaciónSuma = scanner.next();
-
-
+    public int dividir(int valor1, int valor2) {
+        if (valor2 != 0) {
+            return valor1 / valor2;
+        } else {
+            throw new IllegalArgumentException("No es divisible por cero (0)");
+        }
+    }
 }

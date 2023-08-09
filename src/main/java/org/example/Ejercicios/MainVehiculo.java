@@ -1,6 +1,6 @@
 package org.example.Ejercicios;
 
-public class Toyota {
+public class MainVehiculo {
 
     public static void main(String[] args) {
 

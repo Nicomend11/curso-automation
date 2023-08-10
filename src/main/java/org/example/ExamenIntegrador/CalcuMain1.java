@@ -64,15 +64,7 @@ public class CalcuMain1 {
                 } catch (IllegalArgumentException e) {
                     System.out.println(e.getMessage());
                     return;
-
-                }
-//                System.out.println("Resultado: " + resultado);
-//
-//                if (resultado < 0) {
-//                    System.out.println("El resultado es negativo, ten Cuidado!");
-//                }
-//                if (resultado > 1000) {
-//                    System.out.println("El resultado es un número grande");
+                     }
                 }
             }
         }

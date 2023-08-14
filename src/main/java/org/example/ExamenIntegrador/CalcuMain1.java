@@ -29,7 +29,7 @@ public class CalcuMain1 {
                     System.out.println("El resultado es negativo, ten Cuidado!");
                 }
                 if (resultado > 1000) {
-            System.out.println("El resultado es un número grande");
+                System.out.println("El resultado es un número grande");
                 }
                 break;
             case '-':

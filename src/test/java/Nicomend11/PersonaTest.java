@@ -8,22 +8,23 @@ public class PersonaTest {
 
     @Test
     public void validarNombre() {
-        Persona persona = new Persona("Nicolás", "Mendoza", 37);
+        Persona persona = new Persona("Cesar", "Mejia", 30);
+        persona.setNombre("Cesar");
 
-        Assert.assertEquals(persona.getNombre(), "Nicolás");
+        Assert.assertEquals(persona.getNombre(), "Cesar");
     }
 
     @Test
     public void validarNombreIncorrecto() {
-        Persona persona = new Persona("Nicolás", "Mendoza", 37);
+        Persona persona = new Persona("Cesar", "Mejia", 30);
 
-        Assert.assertNotEquals(persona.getNombre(), "Nicolás5");
+        Assert.assertNotEquals(persona.getNombre(), "Cesar2");
     }
 
     @Test
     public void validarSaludo() {
-        Persona persona = new Persona("Julio", "Mendoza", 37);
+        Persona persona = new Persona("Octavio", "Mejia", 30);
 
-        Assert.assertTrue(persona.saludar().equals("Hola, soy Julio Mendoza"));
+        Assert.assertTrue(persona.saludar().equals("Hola, soy Octavio Mejia"));
     }
 }

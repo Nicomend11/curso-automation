@@ -60,10 +60,12 @@ public class PracticeClase9 {
         loginBtn.click();
 
         //Validacion del Login
-        boolean titlePage = this.wait.until(ExpectedConditions.textToBe(By.xpath("//h1[@class = 'page-heading']"), "MY ACCOUNT"));
+        boolean titlePage =
+                this.wait.until(ExpectedConditions.textToBe(By.xpath("//h1[@class = 'page-heading']"), "MY ACCOUNT"));
+
+        Assert.assertTrue(titlePage, "El titulo no coincide");
 
     }
-
     @AfterTest
     public void tearDown() {
         if (this.driver != null) {

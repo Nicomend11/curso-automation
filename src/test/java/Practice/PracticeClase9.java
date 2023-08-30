@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
@@ -15,6 +17,8 @@ import java.time.Duration;
 public class PracticeClase9 {
 
     private WebDriver driver;
+
+    private WebDriverWait wait;
 
     @BeforeTest
     public void setup() {
@@ -28,6 +32,8 @@ public class PracticeClase9 {
         options.setPageLoadTimeout(Duration.ofSeconds(60));
 
         this.driver = new ChromeDriver(options);
+
+        this.wait = new WebDriverWait(this.driver, Duration.ofSeconds(15));
     }
 
     @Test
@@ -36,17 +42,26 @@ public class PracticeClase9 {
     }
 
     @Test
-    public void validarHome() {
+    public void loginCorrecto() {
         this.driver.get("http://www.automationpractice.pl/index.php?");
 
-        WebElement accesoALoginBtn = this.driver.findElement(By.className("login"));
-        WebElement emailInput = this.driver.findElement(By.id("email"));
-        WebElement passInput = this.driver.findElement(By.id("passwd"));
+        //Acceso a la pagina
+        WebElement signInBtn = this.wait.until(ExpectedConditions.elementToBeClickable(By.className("login")));
+        signInBtn.click();
 
+        // Ingreso email y password
+        WebElement emailInput = this.wait.until(ExpectedConditions.presenceOfElementLocated(By.id("email")));
+        emailInput.sendKeys("noreply9@gmail.com");
 
-        Assert.assertTrue(accesoALoginBtn.isDisplayed());
-        Assert.assertTrue(emailInput.isDisplayed());
-        Assert.assertTrue(passInput.isDisplayed());
+        WebElement passInput = this.wait.until(ExpectedConditions.presenceOfElementLocated(By.id("passwd")));
+        passInput.sendKeys("noreply9");
+
+        WebElement loginBtn = this.wait.until(ExpectedConditions.elementToBeClickable(By.id("SubmitLogin")));
+        loginBtn.click();
+
+        //Validacion del Login
+        boolean titlePage = this.wait.until(ExpectedConditions.textToBe(By.xpath("//h1[@class = 'page-heading']"), "MY ACCOUNT"));
+
     }
 
     @AfterTest

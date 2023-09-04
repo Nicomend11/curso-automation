@@ -23,6 +23,14 @@ public class BaseTest {
         options.addArguments("start-maximized");
         options.addArguments("incognito");
 
+//        options.addArguments("disable-infobars"); // disabling infobars
+//        options.addArguments("--disable-extensions"); // disabling extensions
+//        options.addArguments("--disable-gpu"); // applicable to windows os only
+//        options.addArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+//        options.addArguments("--no-sandbox"); // Bypass OS security model
+
+//        options.addArguments("--headless");
+
         options.setPageLoadTimeout(Duration.ofSeconds(60));
 
         this.driver = new ChromeDriver(options);
@@ -30,6 +38,14 @@ public class BaseTest {
         this.wait = new WebDriverWait(this.driver, Duration.ofSeconds(15));
 
         this.getDriver().get("http://www.automationpractice.pl/index.php?");
+    }
+
+    public WebDriver getDriver() {
+        return driver;
+    }
+
+    public WebDriverWait getWait() {
+        return wait;
     }
 
     @AfterTest

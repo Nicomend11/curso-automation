@@ -1,4 +1,4 @@
-package org.example.ClaseAutomation;
+package org.example.ClaseAutomation.Clases;
 
 public class Persona {
 

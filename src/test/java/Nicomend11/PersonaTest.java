@@ -1,6 +1,6 @@
 package Nicomend11;
 
-import org.example.ClaseAutomation.Persona;
+import org.example.ClaseAutomation.Clases.Persona;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

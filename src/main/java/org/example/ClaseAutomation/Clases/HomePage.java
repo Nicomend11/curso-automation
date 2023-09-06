@@ -1,4 +1,4 @@
-package org.example.ClaseAutomation;
+package org.example.ClaseAutomation.Clases;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

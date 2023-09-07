@@ -20,4 +20,14 @@ public class LoginDefinitions {
     public void elUsuarioSeEncuentraEnLaPantallaDeSuCuenta() {
         System.out.println("Step ENTONCES");
     }
+
+    @Cuando("el usuario ingresa email y contraseña invalidas")
+    public void elUsuarioIngresaEmailYContraseñaInvalidas() {
+        System.out.println("Step CUANDO");
+    }
+
+    @Entonces("el usuario no se loguea")
+    public void elUsuarioNoSeLoguea() {
+        System.out.println("Step ENTONCES");
+    }
 }

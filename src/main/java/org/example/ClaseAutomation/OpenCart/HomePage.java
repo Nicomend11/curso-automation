@@ -37,4 +37,8 @@ public class HomePage {
         WebElement register = wait.until(ExpectedConditions.elementToBeClickable(this.registerBtn));
         register.click();
     }
+
+    public void abrirPagina(String url) {
+
+    }
 }

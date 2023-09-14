@@ -39,6 +39,6 @@ public class HomePage {
     }
 
     public void abrirPagina(String url) {
-
+        this.driver.get(url);
     }
 }

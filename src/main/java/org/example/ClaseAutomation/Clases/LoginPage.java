@@ -7,7 +7,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+
 public class LoginPage {
+
     private By emailInput = By.id("email");
     private By passInput = By.id("passwd");
     private By loginBtn = By.id("SubmitLogin");
@@ -32,4 +34,3 @@ public class LoginPage {
     }
 
 }
-

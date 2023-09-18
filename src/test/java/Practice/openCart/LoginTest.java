@@ -16,7 +16,7 @@ public class LoginTest extends BaseTest {
         MyAccountPage myAccountPage = new MyAccountPage(getDriver());
 
         homePage.accederAlLogin();
-        loginPage.login("pepe@pepe.com.ar", "12345678");
+        loginPage.login("noreply@gmail.com", "Nicolas1");
 
         Assert.assertTrue(myAccountPage.tituloEsVisible());
     }

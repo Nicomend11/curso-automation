@@ -37,7 +37,7 @@ public class BaseTest {
 
         this.wait = new WebDriverWait(this.driver, Duration.ofSeconds(15));
 
-        this.getDriver().get("http://www.automationpractice.pl/index.php?");
+        this.getDriver().get("https://opencart.abstracta.us/");
     }
 
     public WebDriver getDriver() {

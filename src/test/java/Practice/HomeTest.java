@@ -11,7 +11,7 @@ public class HomeTest extends BaseTest {
     @Ignore
     @Test
     public void ingresarAlHome() {
-        this.getDriver().get("http://www.automationpractice.pl/index.php?");
+        this.getDriver().get("https://opencart.abstracta.us/");
     }
 
     @Test

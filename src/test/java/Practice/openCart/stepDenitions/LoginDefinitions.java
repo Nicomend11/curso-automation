@@ -1,6 +1,5 @@
 package Practice.openCart.stepDenitions;
 
-import dev.failsafe.internal.util.Assert;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
@@ -8,7 +7,7 @@ import org.example.ClaseAutomation.Hooks.Hooks;
 import org.example.ClaseAutomation.OpenCart.HomePage;
 import org.example.ClaseAutomation.OpenCart.LoginPage;
 import org.example.ClaseAutomation.OpenCart.MyAccountPage;
-
+import org.testng.Assert;
 
 public class LoginDefinitions {
 
@@ -31,12 +30,11 @@ public class LoginDefinitions {
 
     @Cuando("el usuario ingresa email y contraseña validas")
     public void elUsuarioIngresaEmailYContraseñaValidas() {
-        loginPage.login("pepe@pepe.com", "123456789");
+        loginPage.login("noreply@gmail.com", "Nicolas1");
     }
 
     @Entonces("el usuario se encuentra en la pantalla de su cuenta")
     public void elUsuarioSeEncuentraEnLaPantallaDeSuCuenta() {
         Assert.assertTrue(myAccountPage.tituloEsVisible());
     }
-
 }

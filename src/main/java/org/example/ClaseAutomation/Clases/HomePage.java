@@ -7,7 +7,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
+
 public class HomePage {
+
     private By busquedaInput = By.id("search_query_top");
     private By title = By.xpath("//a[@title='My Shop']");
     private By accesoLogin = By.className("login");
@@ -46,5 +48,3 @@ public class HomePage {
         element.click();
     }
 }
-
-

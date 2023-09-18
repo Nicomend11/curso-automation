@@ -1,6 +1,7 @@
-package Practice.openCart;
+package PracticeAutomation.openCart;
 
-import Practice.BaseTest;
+import PracticeAutomation.BaseTest;
+import com.github.javafaker.Faker;
 import org.example.ClaseAutomation.OpenCart.AccountPage;
 import org.example.ClaseAutomation.OpenCart.HomePage;
 import org.example.ClaseAutomation.OpenCart.RegisterPage;
@@ -15,13 +16,15 @@ public class RegisterTest extends BaseTest {
         RegisterPage registerPage = new RegisterPage(getDriver());
         AccountPage accountPage = new AccountPage(getDriver());
 
+        Faker faker = new Faker();
+
         homePage.accederARegistro();
         registerPage.completarFormulario(
-                "cesar",
-                "mejia",
-                "cesar2@gmail.com.ar",
-                "1111111111",
-                "12345678"
+                faker.name().firstName(),
+                faker.name().lastName(),
+                faker.internet().emailAddress(),
+                faker.phoneNumber().phoneNumber(),
+                faker.internet().password()
         );
 
         Assert.assertTrue(accountPage.successLinkEsVisible());

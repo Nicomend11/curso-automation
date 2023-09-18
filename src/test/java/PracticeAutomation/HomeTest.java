@@ -1,4 +1,4 @@
-package Practice;
+package PracticeAutomation;
 
 
 import org.example.ClaseAutomation.ClasesOpenCart.HomePage;

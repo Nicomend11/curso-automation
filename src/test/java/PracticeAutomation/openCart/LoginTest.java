@@ -1,6 +1,6 @@
-package Practice.openCart;
+package PracticeAutomation.openCart;
 
-import Practice.BaseTest;
+import PracticeAutomation.BaseTest;
 import org.example.ClaseAutomation.OpenCart.HomePage;
 import org.example.ClaseAutomation.OpenCart.LoginPage;
 import org.example.ClaseAutomation.OpenCart.MyAccountPage;

@@ -5,7 +5,7 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions(
         features = "src/test/resources/features",
-        glue = {"org.example.ClaseAutomation.stepDefinitions","org.example.ClaseAutomation.Hooks"},
+        glue = {"org.example.test.PracticeAutomation.openCart.stepDefinitions","org.example.test.PracticeAutomation.Hooks"},
         snippets = CucumberOptions.SnippetType.CAMELCASE
 )
 

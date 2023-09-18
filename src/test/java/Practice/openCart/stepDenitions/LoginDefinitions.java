@@ -3,7 +3,7 @@ package Practice.openCart.stepDenitions;
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
 import io.cucumber.java.es.Entonces;
-import org.example.ClaseAutomation.Hooks.Hooks;
+import Practice.Hooks.Hooks;
 import org.example.ClaseAutomation.OpenCart.HomePage;
 import org.example.ClaseAutomation.OpenCart.LoginPage;
 import org.example.ClaseAutomation.OpenCart.MyAccountPage;

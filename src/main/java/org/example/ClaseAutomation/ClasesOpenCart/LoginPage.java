@@ -1,4 +1,4 @@
-package org.example.ClaseAutomation.Clases;
+package org.example.ClaseAutomation.ClasesOpenCart;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

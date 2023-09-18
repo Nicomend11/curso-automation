@@ -1,4 +1,4 @@
-package org.example.ClaseAutomation.Hooks;
+package Practice.Hooks;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;

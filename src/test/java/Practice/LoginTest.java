@@ -1,9 +1,9 @@
 package Practice;
 
 
-import org.example.ClaseAutomation.Clases.HomePage;
-import org.example.ClaseAutomation.Clases.LoginPage;
-import org.example.ClaseAutomation.Clases.myAccountPage;
+import org.example.ClaseAutomation.ClasesOpenCart.HomePage;
+import org.example.ClaseAutomation.ClasesOpenCart.LoginPage;
+import org.example.ClaseAutomation.ClasesOpenCart.myAccountPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 

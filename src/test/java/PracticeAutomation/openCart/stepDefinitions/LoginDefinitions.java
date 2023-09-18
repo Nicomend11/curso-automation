@@ -1,4 +1,4 @@
-package PracticeAutomation.openCart.stepDenitions;
+package PracticeAutomation.openCart.stepDefinitions;
 
 import io.cucumber.java.es.Cuando;
 import io.cucumber.java.es.Dado;
@@ -15,6 +15,7 @@ public class LoginDefinitions {
     private LoginPage loginPage;
     private MyAccountPage myAccountPage;
 
+
     public LoginDefinitions() {
         this.homePage = new HomePage(Hooks.getDriver());
         this.loginPage = new LoginPage(Hooks.getDriver());
@@ -23,16 +24,13 @@ public class LoginDefinitions {
 
     @Dado("que el usuario accede al login de la pagina opencart")
     public void queElUsuarioAccedeAlLoginDeLaPaginaOpencart() {
-        homePage.abrirPagina(Hooks.getProperties().getProperty("url"));
+        homePage.abrirPagina("https://opencart.abstracta.us/");
         homePage.accederAlLogin();
     }
 
     @Cuando("el usuario ingresa email y contraseña validas")
-    public void elUsuarioIngresaEmailYContrasenaValidas() {
-        loginPage.login(
-                Hooks.getProperties().getProperty("username"),
-                Hooks.getProperties().getProperty("password")
-        );
+    public void elUsuarioIngresaEmailYContraseñaValidas() {
+        loginPage.login("noreply@gmail.com", "Nicolas1");
     }
 
     @Entonces("el usuario se encuentra en la pantalla de su cuenta")

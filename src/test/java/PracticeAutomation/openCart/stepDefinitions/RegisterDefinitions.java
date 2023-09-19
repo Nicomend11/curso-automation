@@ -39,5 +39,10 @@ public class RegisterDefinitions {
     public void elUsuarioYaSeEncuentraRegistradoEnLaPagina() {
           Assert.assertTrue(myAccountPage.mensajeDeErrorEsVisible2());
     }
+
+    @Entonces("el usuario se encuentra registrado en la pagina")
+    public void elUsuarioSeEncuentraRegistradoEnLaPagina() {
+        registerPage.crearCuenta();
+    }
 }
 

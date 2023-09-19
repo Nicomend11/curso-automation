@@ -3,9 +3,6 @@ package org.example.ClaseAutomation.OpenCart;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-
 public class AccountPage extends Page {
 
     private By title = By.xpath("//h1[text()='Account']");

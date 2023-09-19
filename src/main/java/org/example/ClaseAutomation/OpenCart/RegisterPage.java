@@ -1,7 +1,9 @@
 package org.example.ClaseAutomation.OpenCart;
 
+import com.github.javafaker.Faker;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+
 
 public class RegisterPage extends Page {
 
@@ -34,4 +36,20 @@ public class RegisterPage extends Page {
         click(this.continueBtn);
     }
 
+    public void crearCuenta() {
+        HomePage homePage = new HomePage(driver);
+        RegisterPage registerPage = new RegisterPage(driver);
+        AccountPage accountPage = new AccountPage(driver);
+
+        Faker faker = new Faker();
+
+        homePage.accederARegistro();
+        registerPage.completarFormulario(
+                faker.name().firstName(),
+                faker.name().lastName(),
+                faker.internet().emailAddress(),
+                faker.phoneNumber().phoneNumber(),
+                faker.internet().password()
+        );
+    }
 }

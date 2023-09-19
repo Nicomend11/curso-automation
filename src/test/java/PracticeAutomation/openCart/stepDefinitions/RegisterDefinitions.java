@@ -44,5 +44,16 @@ public class RegisterDefinitions {
     public void elUsuarioSeEncuentraRegistradoEnLaPagina() {
         registerPage.crearCuenta();
     }
+
+    @Cuando("el usuario no completa su email como dato obligatorio")
+    public void elUsuarioNoCompletaSuEmailComoDatoObligatorio() {
+        registerPage.completarFormulario("Roberto", "Perez",
+                "", "3518888888", "Roberto1");
+    }
+
+    @Entonces("el usuario no se registra en la pagina")
+    public void elUsuarioNoSeRegistraEnLaPagina() {
+        Assert.assertTrue(myAccountPage.mensajeDeErrorEmail());
+    }
 }
 

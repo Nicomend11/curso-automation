@@ -10,6 +10,7 @@ import java.time.Duration;
 public class myAccountPage {
 
     private By title = By.xpath("//h1[@class='page-heading']");
+    private By alertAccount = By.xpath("//*[@id=\"top\"]/div");
 
     private WebDriver driver;
     private WebDriverWait wait;
@@ -21,5 +22,9 @@ public class myAccountPage {
 
     public boolean tituloEsVisible(String titleEsperado) {
         return this.wait.until(ExpectedConditions.textToBe(title, titleEsperado));
+    }
+
+    public boolean mensajeDeErrorEsVisible2(String alertEsperado2) {
+        return this.wait.until(ExpectedConditions.textToBe(alertAccount, alertEsperado2));
     }
 }

@@ -13,6 +13,8 @@ public class HomePage {
     private By busquedaInput = By.id("search_query_top");
     private By title = By.xpath("//a[@title='My Shop']");
     private By accesoLogin = By.className("login");
+
+    private By accesoRegistro = By.className("Register");
     private By menu = By.id("block_top_menu");
 
     private WebDriver driver;
@@ -38,6 +40,11 @@ public class HomePage {
         return element.isDisplayed();
     }
 
+    public boolean accesoRegistoEsVisible() {
+        WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(accesoRegistro));
+        return element.isDisplayed();
+    }
+
     public boolean menuEsVisible() {
         WebElement element = wait.until(ExpectedConditions.presenceOfElementLocated(menu));
         return element.isDisplayed();
@@ -45,6 +52,11 @@ public class HomePage {
 
     public void accederAlLogin() {
         WebElement element = this.wait.until(ExpectedConditions.elementToBeClickable(accesoLogin));
+        element.click();
+    }
+
+    public void accederARegistro() {
+        WebElement element = this.wait.until(ExpectedConditions.elementToBeClickable(accesoRegistro));
         element.click();
     }
 

@@ -7,7 +7,6 @@ import PracticeAutomation.Hooks.Hooks;
 import org.example.ClaseAutomation.OpenCart.HomePage;
 import org.example.ClaseAutomation.OpenCart.LoginPage;
 import org.example.ClaseAutomation.OpenCart.MyAccountPage;
-import org.example.ClaseAutomation.OpenCart.RegisterPage;
 import org.testng.Assert;
 
 public class LoginDefinitions {

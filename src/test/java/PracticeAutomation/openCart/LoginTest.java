@@ -21,4 +21,15 @@ public class LoginTest extends BaseTest {
         Assert.assertTrue(myAccountPage.tituloEsVisible());
     }
 
+    @Test
+    public void loginIncorrecto() {
+        HomePage homePage = new HomePage(getDriver());
+        LoginPage loginPage = new LoginPage(getDriver());
+
+        homePage.accederAlLogin();
+        loginPage.login("usuarioincorrecto@gmail.com", "contraseñaincorrecta");
+
+        Assert.assertTrue(loginPage.mensajeDeErrorEsVisible("Warning"));
+    }
+
 }

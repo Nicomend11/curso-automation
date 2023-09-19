@@ -7,6 +7,7 @@ public class LoginPage extends Page {
     private By emailInput = By.id("input-email");
     private By passInput = By.id("input-password");
     private By loginBtn = By.xpath("//input[@value='Login']");
+    private By alert = By.xpath("//div[@class='alert alert-danger alert-dismissible']");
 
     public LoginPage(WebDriver driver) {
         super(driver);
@@ -17,4 +18,9 @@ public class LoginPage extends Page {
         sendKeys(this.passInput, password);
         click(this.loginBtn);
     }
+
+    public boolean mensajeDeErrorEsVisible(String warning) {
+        return isDisplayed(alert);
+    }
+
 }

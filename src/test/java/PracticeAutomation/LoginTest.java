@@ -21,5 +21,4 @@ public class LoginTest extends BaseTest {
 
          Assert.assertTrue(myAccountPage.tituloEsVisible("MY ACCOUNT"));
     }
-
 }

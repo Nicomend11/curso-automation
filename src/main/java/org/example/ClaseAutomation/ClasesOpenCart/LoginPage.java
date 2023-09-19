@@ -13,6 +13,7 @@ public class LoginPage {
     private By emailInput = By.id("email");
     private By passInput = By.id("passwd");
     private By loginBtn = By.id("SubmitLogin");
+    private By alert = By.xpath("//*[@id=\"top\"]/div");
 
     private WebDriver driver;
     private WebDriverWait wait;
@@ -31,6 +32,9 @@ public class LoginPage {
 
         WebElement loginBtnElement = wait.until(ExpectedConditions.elementToBeClickable(loginBtn));
         loginBtnElement.click();
-    }
 
+    }
+    public boolean mensajeDeErrorEsVisible(String alertEsperado) {
+          return this.wait.until(ExpectedConditions.textToBe(alert, alertEsperado));
+    }
 }

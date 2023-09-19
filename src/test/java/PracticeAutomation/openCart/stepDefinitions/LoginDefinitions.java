@@ -38,4 +38,13 @@ public class LoginDefinitions {
         Assert.assertTrue(myAccountPage.tituloEsVisible());
     }
 
+    @Cuando("el usuario ingresa email y contraseña invalidas")
+    public void elUsuarioIngresaEmailYContraseñaInvalidas() {
+        loginPage.login("usuarioincorrecto@gmail.com", "contraseñaincorrecta");
+    }
+
+    @Entonces("el usuario se encuentra con un mensaje de alerta")
+    public void elUsuarioSeEncuentraConUnMensajeDeAlerta() {
+        Assert.assertTrue(loginPage.mensajeDeErrorEsVisible("Warning"));
+    }
 }

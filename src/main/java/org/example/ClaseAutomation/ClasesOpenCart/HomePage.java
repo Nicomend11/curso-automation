@@ -47,4 +47,5 @@ public class HomePage {
         WebElement element = this.wait.until(ExpectedConditions.elementToBeClickable(accesoLogin));
         element.click();
     }
+
 }

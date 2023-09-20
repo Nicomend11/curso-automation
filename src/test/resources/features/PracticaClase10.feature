@@ -3,7 +3,6 @@
 Característica: Register
 
   @critical
-
   Escenario: Nuevo Registro de Usuario
     Dado que el usuario accede al registro en la pagina opencart
     Cuando el usuario completa sus datos personales obligatorios

@@ -11,7 +11,6 @@ public class myAccountPage {
 
     private By title = By.xpath("//h1[@class='page-heading']");
     private By alertAccount = By.xpath("//*[@id=\"top\"]/div");
-
     private By alertAccountEmail = By.xpath("//*[@id=\"top\"]/div");
 
     private WebDriver driver;
@@ -33,4 +32,6 @@ public class myAccountPage {
     public boolean mensajeDeErrorEmail(String alertEmail) {
         return this.wait.until(ExpectedConditions.textToBe(alertAccount, alertEmail));
     }
+
+
 }

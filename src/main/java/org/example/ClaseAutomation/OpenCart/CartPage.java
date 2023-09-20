@@ -8,7 +8,7 @@ public class CartPage extends Page {
     private By selectProduct = By.xpath("//a[contains(@href, 'product_id=30') and text()='Canon EOS 5D']");
     private By nameCamera = By.xpath("//h1[text()='Canon EOS 5D']");
     private By selectOptions = By.xpath("//select[@name='option[226]' and @id='input-option226']");
-    private By selectBlue = By.xpath("//select[@name='option[226]' and @id='input-option226']/option[text()='Blue']");
+    private By selectColor = By.xpath("//option[@value='16' and text()='Blue']");
     private By addToCartBtn = By.xpath("//button[@id='button-cart' and text()='Add to Cart']");
     public CartPage(WebDriver driver) {
         super(driver);
@@ -23,7 +23,7 @@ public class CartPage extends Page {
         click(this.selectOptions);
     }
     public void seleccionarColor() {
-        click(this.selectBlue);
+        click(this.selectColor);
     }
     public void agregarAlCarrito() {
         click(this.addToCartBtn);

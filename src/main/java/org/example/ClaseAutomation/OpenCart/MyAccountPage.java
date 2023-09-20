@@ -13,7 +13,7 @@ public class MyAccountPage extends Page {
     private By camerasBtn = By.xpath("//a[text()='Cameras']");
     private By favoriteHeartBtn = By.xpath("//button[contains(@onclick, \"wishlist.add('30')\")]");
     private By listaDeseos = By.xpath("//i[@class='fa fa-heart']");
-    private By productName = By.xpath("//a[contains(@href, 'product_id=30') and text()='Canon EOS 5D']");
+    private By productName = By.xpath("//td[@class='text-left' and text()='Product 3']");
 
     public MyAccountPage(WebDriver driver) {
         super(driver);

@@ -15,8 +15,8 @@ public class CartDefinitions {
         this.cartPage = new CartPage(Hooks.getDriver());
     }
 
-    @Cuando("el usuario selecciona el producto y elige una opcion")
-    public void elUsuarioSeleccionaElProductoYEligeUnaOpcion() {
+    @Cuando("el usuario selecciona el producto, elige una opcion y lo agrega al carrito")
+    public void elUsuarioSeleccionaElProductoEligeUnaOpcionYLoAgregaAlCarrito() {
         cartPage.seleccionarCamara();
         Assert.assertTrue(cartPage.nombreCamara());
         cartPage.seleccionarOpciones();

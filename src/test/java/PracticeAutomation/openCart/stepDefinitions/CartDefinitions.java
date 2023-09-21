@@ -2,6 +2,7 @@ package PracticeAutomation.openCart.stepDefinitions;
 
 import PracticeAutomation.Hooks.Hooks;
 import io.cucumber.java.es.Cuando;
+import io.cucumber.java.es.Entonces;
 import org.example.ClaseAutomation.OpenCart.CartPage;
 import org.example.ClaseAutomation.OpenCart.MyAccountPage;
 import org.testng.Assert;
@@ -23,5 +24,13 @@ public class CartDefinitions {
         cartPage.seleccionarColor();
         cartPage.agregarAlCarrito();
     }
-
+    @Cuando("el usuario ingresa al carrito")
+    public void elUsuarioIngresaAlCarrito() {
+        cartPage.seleccionarCarrito();
+        cartPage.verCarrito();
+    }
+    @Entonces("el usuario posee un producto en el carrito")
+    public void elUsuarioPoseeUnProductoEnElCarrito() {
+        Assert.assertTrue(cartPage.existeUnProucto());
+    }
 }

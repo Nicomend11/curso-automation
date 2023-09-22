@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 
 public class CartPage extends Page {
 
-    private By selectProduct = By.xpath("//a[contains(@href, 'product_id=30')]");
+    private By selectProduct = By.xpath("//a[contains(@href, 'product_id=30') and contains(@href, 'route=product/product') and contains(@href, 'path=33') and text()='Canon EOS 5D']");
     private By nameCamera = By.xpath("//a[contains(@href, 'product_id=30') and text()='Canon EOS 5D']");
     private By selectOptions = By.xpath("//select[@name='option[226]' and @id='input-option226']");
     private By selectColor = By.xpath("//option[@value='16']");

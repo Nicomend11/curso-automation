@@ -13,6 +13,9 @@ public class CartPage extends Page {
     private By shoppingCartBtn = By.xpath ("//button[contains(@class, 'btn-inverse') and contains(@class, 'btn-block') and contains(@class, 'btn-lg') and contains(@class, 'dropdown-toggle')]");
     private By viewCartBtn = By.xpath("//strong[contains(text(), 'View Cart') and i[@class='fa fa-shopping-cart']]");
     private By existsProduct = By.xpath("//td[@class='text-left' and a[contains(@href, 'product_id=30')] and small[text()='Select: Blue'] and small[contains(text(), 'Reward Points: 200')]]");
+    private By shoppCartBtn = By.xpath("//a[contains(@href, 'route=checkout/cart') and contains(@title, 'Shopping Cart') and i[@class='fa fa-shopping-cart'] and span[@class='hidden-xs hidden-sm hidden-md' and text()='Shopping Cart']]");
+    private By removeBtn = By.xpath("//i[@class='fa fa-times-circle']");
+    private By emptyMessage = By.xpath("//p[text()='Your shopping cart is empty!']");
     public CartPage(WebDriver driver) {
         super(driver);
     }
@@ -21,6 +24,9 @@ public class CartPage extends Page {
     }
     public boolean existeUnProucto() {
         return isDisplayed(existsProduct);
+    }
+    public boolean mensajeCarritoVacio() {
+        return isDisplayed(emptyMessage);
     }
     public void seleccionarCamara() {
         click(this.selectProduct);
@@ -39,5 +45,11 @@ public class CartPage extends Page {
     }
     public void verCarrito() {
         click(this.viewCartBtn);
+    }
+    public void accederCarrito() {
+        click(this.shoppCartBtn);
+    }
+    public void removerProducto() {
+        click(this.removeBtn);
     }
 }

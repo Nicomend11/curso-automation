@@ -32,4 +32,24 @@ public class CartDefinitions {
     public void elUsuarioPoseeUnProductoEnElCarrito() {
         Assert.assertTrue(cartPage.existeUnProucto());
     }
+
+    @Cuando("el usuario accede al carrito de compras")
+    public void elUsuarioAccedeAlCarritoDeCompras() {
+        cartPage.accederCarrito();
+    }
+
+    @Cuando("el usuario visualiza un producto en el carrito")
+    public void elUsuarioVisualizaUnProductoEnElCarrito() {
+        Assert.assertTrue(cartPage.existeUnProucto());
+    }
+
+    @Cuando("el usuario decide remover el producto")
+    public void elUsuarioDecideRemoverElProducto() {
+        cartPage.removerProducto();
+    }
+
+    @Entonces("el usuario ya no posee un producto en el carrito")
+    public void elUsuarioYaNoPoseeUnProductoEnElCarrito() {
+    cartPage.mensajeCarritoVacio();
+    }
 }

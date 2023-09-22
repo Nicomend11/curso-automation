@@ -15,6 +15,7 @@ public class MyAccountPage extends Page {
     private By listaDeseos = By.xpath("//i[@class='fa fa-heart']");
     private By productName = By.xpath("//td[@class='text-left' and text()='Product 3']");
 
+
     public MyAccountPage(WebDriver driver) {
         super(driver);
     }

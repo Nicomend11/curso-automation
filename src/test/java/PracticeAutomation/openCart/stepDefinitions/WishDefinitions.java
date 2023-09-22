@@ -27,7 +27,7 @@ public class WishDefinitions {
         loginPage.login("noreply@gmail.com", "Nicolas1");
         Assert.assertTrue(myAccountPage.tituloEsVisible());
     }
-    @Cuando("el usuario ingresa ingresa en la seccion Cameras")
+    @Cuando("el usuario ingresa en la seccion Cameras")
     public void elUsuarioIngresaEnLaSeccionCameras() {
         myAccountPage.accederACameras();
         Assert.assertTrue(myAccountPage.tituloCameraVisible());
@@ -36,7 +36,7 @@ public class WishDefinitions {
     public void elUsuarioAgregaUnProductoAFavoritos() {
         myAccountPage.agregarAFavorites();
     }
-    @Cuando("el usuario ingresa ingresa a la lista de Deseos")
+    @Cuando("el usuario ingresa a la lista de Deseos")
     public void elUsuarioIngresaIngresaALaListaDeDeseos() {
         myAccountPage.ingresarAListaDeseos();
         Assert.assertTrue(myAccountPage.tituloListaDeseos());
@@ -45,4 +45,5 @@ public class WishDefinitions {
     public void elUsuarioPoseeUnProductoEnFavoritos() {
         Assert.assertTrue(myAccountPage.nombreProducto());
     }
+
 }

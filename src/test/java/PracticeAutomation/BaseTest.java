@@ -47,7 +47,6 @@ public class BaseTest {
     public WebDriverWait getWait() {
         return wait;
     }
-
     @AfterTest
     public void tearDown() {
         if (this.driver != null) {

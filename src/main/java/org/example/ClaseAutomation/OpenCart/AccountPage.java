@@ -11,11 +11,9 @@ public class AccountPage extends Page {
     public AccountPage(WebDriver driver) {
         super(driver);
     }
-
     public boolean tituloEsVisible() {
         return isDisplayed(title);
     }
-
     public boolean successLinkEsVisible() {
         return isDisplayed(succesLink);
     }

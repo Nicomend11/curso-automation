@@ -12,13 +12,11 @@ public class LoginPage extends Page {
     public LoginPage(WebDriver driver) {
         super(driver);
     }
-
     public void login(String email, String password) {
         sendKeys(this.emailInput, email);
         sendKeys(this.passInput, password);
         click(this.loginBtn);
     }
-
     public boolean mensajeDeErrorEsVisible(String warning) {
         return isDisplayed(alert);
     }

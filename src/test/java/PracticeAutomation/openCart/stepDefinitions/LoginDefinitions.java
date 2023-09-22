@@ -15,7 +15,6 @@ public class LoginDefinitions {
     private LoginPage loginPage;
     private MyAccountPage myAccountPage;
 
-
     public LoginDefinitions() {
         this.homePage = new HomePage(Hooks.getDriver());
         this.loginPage = new LoginPage(Hooks.getDriver());
@@ -27,22 +26,18 @@ public class LoginDefinitions {
         homePage.abrirPagina("https://opencart.abstracta.us/");
         homePage.accederAlLogin();
     }
-
     @Cuando("el usuario ingresa email y contraseña validas")
     public void elUsuarioIngresaEmailYContraseñaValidas() {
         loginPage.login("noreply@gmail.com", "Nicolas1");
     }
-
     @Entonces("el usuario se encuentra en la pantalla de su cuenta")
     public void elUsuarioSeEncuentraEnLaPantallaDeSuCuenta() {
         Assert.assertTrue(myAccountPage.tituloEsVisible());
     }
-
     @Cuando("el usuario ingresa email y contraseña invalidas")
     public void elUsuarioIngresaEmailYContraseñaInvalidas() {
         loginPage.login("usuarioincorrecto@gmail.com", "contraseñaincorrecta");
     }
-
     @Entonces("el usuario se encuentra con un mensaje de alerta")
     public void elUsuarioSeEncuentraConUnMensajeDeAlerta() {
         Assert.assertTrue(loginPage.mensajeDeErrorEsVisible("Warning"));

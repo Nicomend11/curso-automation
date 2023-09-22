@@ -15,7 +15,6 @@ public class CartDefinitions {
         this.myAccountPage = new MyAccountPage(Hooks.getDriver());
         this.cartPage = new CartPage(Hooks.getDriver());
     }
-
     @Cuando("el usuario selecciona el producto, elige una opcion y lo agrega al carrito")
     public void elUsuarioSeleccionaElProductoEligeUnaOpcionYLoAgregaAlCarrito() {
         cartPage.seleccionarCamara();

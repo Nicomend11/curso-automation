@@ -37,7 +37,6 @@ public class MyAccountPage extends Page {
     public boolean nombreProducto() {
         return isDisplayed(productName);
     }
-
     public void accederACameras() {
         click(this.camerasBtn);
     }

@@ -45,7 +45,6 @@ public class Hooks {
     public static Properties getProperties() {
         return properties;
     }
-
     public WebDriver getChromeDriver() {
         ChromeOptions options = new ChromeOptions();
 
@@ -66,12 +65,10 @@ public class Hooks {
 
         return new ChromeDriver(options);
     }
-
     public WebDriver getFirefoxDriver() {
         FirefoxOptions options = new FirefoxOptions();
         return null;
     }
-
     @After
     public void tearDown() {
         if (driver != null) {

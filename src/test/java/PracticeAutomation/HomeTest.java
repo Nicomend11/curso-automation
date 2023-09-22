@@ -13,7 +13,6 @@ public class HomeTest extends BaseTest {
     public void ingresarAlHome() {
         this.getDriver().get("https://opencart.abstracta.us/");
     }
-
     @Test
     public void validarHome() {
         HomePage homePage = new HomePage(getDriver());

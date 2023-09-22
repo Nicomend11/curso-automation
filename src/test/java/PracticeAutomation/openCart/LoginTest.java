@@ -20,7 +20,6 @@ public class LoginTest extends BaseTest {
 
         Assert.assertTrue(myAccountPage.tituloEsVisible());
     }
-
     @Test
     public void loginIncorrecto() {
         HomePage homePage = new HomePage(getDriver());

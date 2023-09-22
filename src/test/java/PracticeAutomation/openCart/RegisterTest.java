@@ -9,7 +9,6 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 public class RegisterTest extends BaseTest {
-
     @Test
     public void crearCuenta() {
         HomePage homePage = new HomePage(getDriver());
